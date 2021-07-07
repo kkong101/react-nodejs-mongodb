@@ -88,7 +88,7 @@ function UploadProductPage(props) {
                     onChange={onTitleChange}
                     value={TitleValue}
                 />
-                <br />
+                <br /> 
                 <br />
                 <label>Description</label>
                 <TextArea

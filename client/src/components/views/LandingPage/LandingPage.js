@@ -141,7 +141,7 @@ function LandingPage() {
     }
 
 
-    return (
+    return ( 
         <div style={{ width: '75%', margin: '3rem auto' }}>
             <div style={{ textAlign: 'center' }}>
                 <h2>  <Icon type="rocket" /> 상품 리스트 <Icon type="rocket" />  </h2>
