@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Axios from 'axios';
-import { Icon, Col, Card, Row } from 'antd';
+import { Icon, Col, Card, Row,Button } from 'antd';
 import ImageSlider from '../../utils/ImageSlider';
 import CheckBox from './Sections/CheckBox';
 import RadioBox from './Sections/RadioBox';
@@ -194,7 +194,8 @@ function LandingPage() {
 
             {PostSize >= Limit &&
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                    <button onClick={onLoadMore}>Load More</button>
+                    <Button style={{width: '30%'}} size="large" shape="round" type="primary" block
+                        onClick={onLoadMore}> Load More  </Button>
                 </div>
             }
 

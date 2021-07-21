@@ -35,7 +35,7 @@ function RightMenu(props) {
       <Menu mode={props.mode}>
 
         <Menu.Item key="userInfo">
-          <a href="/userInfo">{user.userData && user.userData.name}님 환영해요😃</a>
+          <a href="/userinfo">{user.userData && user.userData.name}님 환영해요😃</a>
         </Menu.Item>
 
         <Menu.Item key="history">

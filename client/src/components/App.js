@@ -11,6 +11,7 @@ import UploadProductPage from './views/UploadProductPage/UploadProductPage'
 import DetailProductPage from './views/DetailProductPage/DetailProductPage';
 import CartPage from './views/CartPage/CartPage';
 import HistoryPage from './views/HistoryPage/HistoryPage';
+import UserInfoPage from './views/UserInfoPage/UserInfoPage';
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
           <Route exact path="/product/:productId" component={Auth(DetailProductPage, null)} />
           <Route exact path="/user/cart" component={Auth(CartPage, true)} />
           <Route exact path="/history" component={Auth(HistoryPage, true)} />
-
+          <Route exact path="/userinfo" component={Auth(UserInfoPage,true)} />
         </Switch>
       </div>
       <Footer />

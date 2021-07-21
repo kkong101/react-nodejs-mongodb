@@ -8,8 +8,8 @@ import { useDispatch } from 'react-redux';
 
 function DetailProductPage(props) {
     const dispatch = useDispatch();
-    const productId = props.match.params.productId
-    const [Product, setProduct] = useState([])
+    const productId = props.match.params.productId;
+    const [Product, setProduct] = useState([]);
 
     useEffect(() => {
         Axios.get(`/api/product/products_by_id?id=${productId}&type=single`)

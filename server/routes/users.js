@@ -50,7 +50,7 @@ router.post("/login", (req, res) => {
             if (!isMatch)
                 return res.json({ loginSuccess: false, message: "Wrong password" });
 
-            user.generateToken((err, user) => {
+            user.generateTcoken((err, user) => {
                 if (err) return res.status(400).send(err);
                 res.cookie("w_authExp", user.tokenExp);
                 res
@@ -198,15 +198,13 @@ router.post('/successBuy', auth, (req, res) => {
     transactionData.data = req.body.paymentData;
     transactionData.product = history
 
-
+ 
     User.findOneAndUpdate(
         { _id: req.user._id },
         { $push: { history: history }, $set: { cart: [] } },
         { new: true },
         (err, user) => {
             if (err) return res.json({ success: false, err });
-
-
             const payment = new Payment(transactionData)
             payment.save((err, doc) => {
                 if (err) return res.json({ success: false, err });

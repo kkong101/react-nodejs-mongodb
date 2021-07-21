@@ -14,12 +14,6 @@ function ProductInfo(props) {
         props.addToCart(props.detail._id)
     }
 
-
-
-
-
-
-
     return (
         <div>
             <Descriptions title="Product Info">
